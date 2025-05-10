@@ -1342,11 +1342,19 @@ self.C3_ExpressionFuncs = [
 		() => "balyer",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(50, 250, 650, 1100, 1350, 1600, 1800);
+			return () => f0(100, 250, 650, 1100, 1350, 1600, 1800);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(100, 200, 300, 400, 500);
+			return () => f0(200, 300, 400, 500);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(30, 60);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(0, 1);
 		},
 		p => {
 			const n0 = p._GetNode(0);
@@ -1356,12 +1364,12 @@ self.C3_ExpressionFuncs = [
 		() => "blonhareket",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(50, 150, 300, 750, 1000, 1550, 1750, 1900);
+			return () => f0(100, 150, 300, 750, 1000, 1550, 1750, 1900);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
-			return () => subtract(add(f0(1, 2, 3, 4, 5), 10), v1.GetValue());
+			return () => subtract(add(f0(1, 2, 3, 4, 5), 12), v1.GetValue());
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1373,7 +1381,15 @@ self.C3_ExpressionFuncs = [
 			return () => (f0() / 2);
 		},
 		() => 50,
-		() => 900,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((f0() / 2) - 100);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			return () => ((n0.ExpObject() + (n1.ExpObject() / 2)) + 200);
+		},
 		() => -150,
 		() => 1250,
 		() => "Animation 1",
