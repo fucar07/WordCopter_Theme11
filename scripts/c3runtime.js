@@ -1373,11 +1373,7 @@ self.C3_ExpressionFuncs = [
 			return () => (f0() / 2);
 		},
 		() => 50,
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const n1 = p._GetNode(1);
-			return () => (((f0() / 2) + n1.ExpObject()) - 200);
-		},
+		() => 900,
 		() => -150,
 		() => 1250,
 		() => "Animation 1",

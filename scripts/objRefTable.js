@@ -69,7 +69,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Exps.layoutheight,
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Behaviors.Tween.Acts.TweenOneProperty,
-		C3.Plugins.Sprite.Exps.Height,
 		C3.Plugins.Mouse.Cnds.IsOverObject,
 		C3.Plugins.Mouse.Acts.SetCursor,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
